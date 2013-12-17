@@ -23,14 +23,17 @@ document.write('    <a href="http://bmc.github.com/avsl/">AVSL</a>');
 document.write('    <a href="api/org/slf4j/impl/JDK14LoggerAdapter.html">JDK14</a>');
 document.write('    <a href="api/org/slf4j/impl/Log4jLoggerAdapter.html">Log4j</a>');
 document.write('    <a href="api/org/slf4j/impl/SimpleLogger.html">Simple</a>');
+document.write('    <a href="api/org/slf4j/impl/AndroidLoggerAdapter.html">Android</a>');
 document.write('  </p>');
 
 document.write('  <p class="menu_header">Sub-projects</p>');
-document.write('    <a href="http://www.slf4j.org/android/">slf4j-android</a>');
 document.write('    <a href="http://www.slf4j.org/taglib/">slf4j-taglib</a>');
 document.write('  </p>');
 
 document.write('</div>');
+
+document.write('<p>&nbsp;</p>');
+document.write('<div class="jobadd"><p><a href="http://logback.qos.ch/job.html">Your career<br/>@QOS.ch</a></p></div>');
 
 
 document.write('<p>&nbsp;</p>');
@@ -39,5 +42,6 @@ document.write('  <a href="https://www.qos.ch/shop/products/log4jManual">');
 document.write('    <img src="images/buyDirect.jpg" border="0" title="" alt="buy direct from the developer"/>');
 document.write('  </a>');
 document.write('</p>');
+
 
 
