@@ -243,13 +243,13 @@ final public class MessageFormatter {
             // itself escaped: "abc x:\\{}"
             // we have to consume one backward slash
             sbuf.append(messagePattern.substring(i, j - 1));
-            deeplyAppendParameter(sbuf, argArray[L], new HashMap());
+            deeplyAppendParameter(sbuf, argArray[L], new HashMap<Object[], Object>());
             i = j + 2;
           }
         } else {
           // normal case
           sbuf.append(messagePattern.substring(i, j));
-          deeplyAppendParameter(sbuf, argArray[L], new HashMap());
+          deeplyAppendParameter(sbuf, argArray[L], new HashMap<Object[], Object>());
           i = j + 2;
         }
       }
@@ -289,7 +289,7 @@ final public class MessageFormatter {
 
   // special treatment of array values was suggested by 'lizongbo'
   private static void deeplyAppendParameter(StringBuilder sbuf, Object o,
-      Map seenMap) {
+      Map<Object[], Object> seenMap) {
     if (o == null) {
       sbuf.append("null");
       return;
@@ -336,7 +336,7 @@ final public class MessageFormatter {
   }
 
   private static void objectArrayAppend(StringBuilder sbuf, Object[] a,
-      Map seenMap) {
+      Map<Object[], Object> seenMap) {
     sbuf.append('[');
     if (!seenMap.containsKey(a)) {
       seenMap.put(a, null);
